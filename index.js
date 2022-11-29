@@ -1,10 +1,3 @@
-import fsp from 'fs/promises';
-
-async function FindUniqueArray(file){
-    const data = await fsp.readFile('./data.csv', 'utf8');
-    const array = data.split('\r\n');  
-    const unique = arr.filter((item, i, ar) => ar.indexOf(item) === i);
-    return unique;      
-}
+import FindUniqueArray from "./function.js";
 
 console.log(await FindUniqueArray('./data.csv'));
